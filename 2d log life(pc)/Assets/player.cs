@@ -11,19 +11,23 @@ public class player : MonoBehaviour
     public float maxHP=100;
     public float nowHP;
     public Text txt;
+    public float firelate = 0.1f;
+    bool fire;
 
     // Start is called before the first frame update
     private void Start()
     {
         txt.text = nowHP + " / " + maxHP;
+        fire = true;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetMouseButtonDown(0)){
+        if(Input.GetMouseButton(0)&&fire == true){
+            StartCoroutine("delay");
             Instantiate(bullet, firePos.transform.position, this.transform.rotation);
-            //Destroy(bullet,10.0f);
+            fire = false;
         }
         transform.position = transform.position+new Vector3(0,0,0);
         hpvar.value = nowHP/maxHP;
@@ -34,5 +38,9 @@ public class player : MonoBehaviour
         if(other.tag == "Enemy"){
             nowHP -= 10;
         }
+    }
+    IEnumerator delay(){
+        yield return new WaitForSeconds(firelate);
+        fire = true;
     }
 }

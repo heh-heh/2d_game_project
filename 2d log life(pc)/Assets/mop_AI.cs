@@ -12,6 +12,7 @@ public class mop_AI : MonoBehaviour
     public GameObject hp;
     public float movespeed = 2.0f;
     public float range = 10.0f;
+    //public Imege Particle;
 
     void Start()
     {
@@ -38,7 +39,7 @@ public class mop_AI : MonoBehaviour
     {
         if (other.tag == "Player")
         {
-            //Play Particle
+            ///Play Particle;
             //ParticleSystem instance = Instantiate(explosionParticle, transform.position, Quaternion.identity);
             //instance.Play();
             //Destroy(instance.gameObject, instance.main.duration);

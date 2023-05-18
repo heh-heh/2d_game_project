@@ -8,15 +8,13 @@ public class main_move : MonoBehaviour
     float movespeed2=0;
 
     float angle;
-    Vector2 target, mouse;
-    public Transform target2;
+    public Transform target;
     //public Transform target;
     
     // Start is called before the first frame update
     void Start()
     {
         movespeed2=movespeed;
-        target = transform.position;
     }
 
     // Update is called once per frame
@@ -37,10 +35,9 @@ public class main_move : MonoBehaviour
 
         this.transform.position += moveVelocity;
     }
-    void target_turn(){/*
-        mouse = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        angle = Mathf.Atan2(mouse.y - target.y, mouse.x - target.x) * Mathf.Rad2Deg;
-        this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);*/
-        transform.LookAt(target2);
+    void target_turn(){
+        Vector3 look  = target.position - transform.position;
+        float agl = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(agl-90, Vector3.forward);
     }
 }
