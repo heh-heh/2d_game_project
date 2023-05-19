@@ -14,6 +14,7 @@ public class main_move : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        movespeed *= gamemanager.movespeed;
         movespeed2=movespeed;
     }
 

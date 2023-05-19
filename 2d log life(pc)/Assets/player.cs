@@ -12,6 +12,7 @@ public class player : MonoBehaviour
     public float nowHP;
     public Text txt;
     public float firelate = 0.1f;
+    static public float demege = 0;
     bool fire;
 
     // Start is called before the first frame update
@@ -19,6 +20,9 @@ public class player : MonoBehaviour
     {
         txt.text = nowHP + " / " + maxHP;
         fire = true;
+        demege *= gamemanager.demegeup;
+        maxHP *= gamemanager.maxhp;
+        firelate /= gamemanager.gunspeed;
     }
 
     // Update is called once per frame
