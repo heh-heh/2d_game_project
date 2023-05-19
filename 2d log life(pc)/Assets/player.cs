@@ -33,6 +33,9 @@ public class player : MonoBehaviour
             Instantiate(bullet, firePos.transform.position, this.transform.rotation);
             fire = false;
         }
+        if(nowHP == 0){
+            Destroy(gameObject);
+        }
         transform.position = transform.position+new Vector3(0,0,0);
         hpvar.value = nowHP/maxHP;
         txt.text = nowHP + "/" + maxHP;
@@ -40,7 +43,18 @@ public class player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other)
     {
         if(other.tag == "Enemy"){
-            nowHP -= 10;
+            if(other.name == "big"){
+                nowHP-=50;
+            }
+            else if(other.name == "zombi"){
+                nowHP-=10; 
+            }
+            else if(other.name == "speed"){
+                nowHP-=5;
+            }
+            else{
+                nowHP=0;
+            }
         }
     }
     IEnumerator delay(){

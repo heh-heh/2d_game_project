@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - bullet
+  - speedE
+  - haveE
+  - bossE
   layers:
   - Default
   - TransparentFX
