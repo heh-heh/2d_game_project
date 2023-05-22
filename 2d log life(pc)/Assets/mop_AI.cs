@@ -17,6 +17,7 @@ public class mop_AI : MonoBehaviour
     void Start()
     {
         demege=0;
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
     }
 
     void Update()
