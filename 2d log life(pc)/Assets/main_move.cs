@@ -10,6 +10,9 @@ public class main_move : MonoBehaviour
     float angle;
     public Transform target;
     Vector2 tg,tg2;
+
+    public GameObject enemy;
+    List<GameObject> findObj;
     //public Transform target;
     
     // Start is called before the first frame update
@@ -17,13 +20,14 @@ public class main_move : MonoBehaviour
     {
         movespeed *= gamemanager.movespeed;
         movespeed2=movespeed;
-        target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         Move();
+        
         target_turn();
     }
     void Move(){
@@ -39,10 +43,12 @@ public class main_move : MonoBehaviour
         this.transform.position += moveVelocity;
     }
     void target_turn(){
-
+        target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
         Vector3 look  = target.position - transform.position;
         float agl = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.AngleAxis(agl-90, Vector3.forward);
+    }
+    void target_turn2(){
 
     }
 }
