@@ -11,7 +11,6 @@ public class mop_AI : MonoBehaviour
     public Transform player;
     public GameObject hp;
     public float movespeed = 2.0f;
-    public float range = 10.0f;
     //public Imege Particle;
 
     void Start()
@@ -22,19 +21,12 @@ public class mop_AI : MonoBehaviour
 
     void Update()
     {
-        float distance = Vector3.Distance(transform.position, player.position);
-        if(distance<=range){
-            
-            
-            target2 = player.position;
-            angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
-            this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
+        //플레이어 따라 가기
+        target2 = player.position;
+        angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
+        this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
+        transform.position = Vector3.MoveTowards(transform.position, player.position, movespeed*Time.deltaTime);
 
-            transform.position = Vector3.MoveTowards(transform.position, player.position, movespeed*Time.deltaTime);
-        }
-        if(distance < 1){
-            
-        }
     }
         private void OnTriggerEnter2D(Collider2D other)
     {

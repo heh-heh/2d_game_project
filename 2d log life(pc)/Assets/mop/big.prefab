@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7755079037759023817}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 14.328784, y: -8.794262, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -103,7 +103,7 @@ MonoBehaviour:
   player: {fileID: 1862172734324352874, guid: a83631591ff785147bd3e17468b3cc57, type: 3}
   hp: {fileID: 0}
   movespeed: 1.5
-  range: 10
+  range: 500
 --- !u!50 &7755079037759023821
 Rigidbody2D:
   serializedVersion: 4
