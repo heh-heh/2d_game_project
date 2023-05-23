@@ -5,18 +5,17 @@ using UnityEngine;
 public class mop_AI : MonoBehaviour
 {
     float angle;
-    int demege;
-    public int maxhit = 10;
+    public float mophp=10;
+    static public float demege = 10;
     Vector2 target2, target;
     public Transform player;
-    public GameObject hp;
     public float movespeed = 2.0f;
     //public Imege Particle;
 
     void Start()
     {
-        demege=0;
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+
     }
 
     void Update()
@@ -41,14 +40,15 @@ public class mop_AI : MonoBehaviour
             //따로 구현필요
         
             //Set Active off
+            gamemanager.nowHP -= demege;
             Destroy(gameObject);
         }
         else if(other.tag == "bullet"){
-            if(demege+1 == maxhit){
-                gamemanager.exp += (maxhit/(float)2.2);
+            if(mophp <= 0 ){
+                gamemanager.exp += (mophp/(float)2.2);
                 Destroy(gameObject);
             }
-            demege++;
+            mophp -= gamemanager.demege;
         }
     }
 }

@@ -12,38 +12,30 @@ public class player : MonoBehaviour
 
     public float mxp = 100;
 
-    public float maxHP=100;
-    public float nowHP;
-
     public Text txt;
-    static public float demege = 0;
-    
 
     // Start is called before the first frame update
     private void Start()
     {
-        txt.text = nowHP + "  " +"/" + "  "+ maxHP;
-        demege *= gamemanager.demegeup;
-        maxHP *= gamemanager.maxhp;
-        
+        txt.text = gamemanager.nowHP + "  " +"/" + "  "+ gamemanager.maxHP;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(nowHP == 0){
+        if(gamemanager.nowHP == 0){
             Destroy(gameObject);
             gamemanager.diePlayer = true;
         }
         transform.position = transform.position+new Vector3(0,0,0);
 
-        hpvar.value = nowHP/maxHP;
+        hpvar.value = gamemanager.nowHP/gamemanager.maxHP;
         xp.value = gamemanager.exp/mxp;
         if(xp.value >= 1){
             gamemanager.exp = 0;
             gamemanager.lvl+=1;
             mxp = mxp * (float)1.05;
         }
-        txt.text = nowHP + "/" + maxHP;
+        txt.text = gamemanager.nowHP + "/" + gamemanager.maxHP;
     }
 }
