@@ -13,6 +13,7 @@ public class gamemanager : MonoBehaviour
     public static float clde = 1;
     public static float maxhp = 0;
     public static bool diePlayer = false;
+    
     public static int lvl = 1;
     public Text lvtxt;
 

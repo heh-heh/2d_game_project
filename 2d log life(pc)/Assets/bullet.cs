@@ -29,15 +29,7 @@ public class bullet : MonoBehaviour
     {
         if (other.tag == "Enemy")
         {
-            //Play Particle
-            //ParticleSystem instance = Instantiate(explosionParticle, transform.position, Quaternion.identity);
-            //instance.Play();
-            //Destroy(instance.gameObject, instance.main.duration);
-        
-            //Take Damage
-            //따로 구현필요
-        
-            //Set Active off
+
             Destroy(gameObject);
         }
     }

@@ -28,7 +28,6 @@ public class main_move : MonoBehaviour
     {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Move();
-        //target_turn();
         GameObject closestEnemy = FindClosestEnemy();
         Vector3 direction = closestEnemy.transform.position - transform.position; // 플레이어에서 적까지의 방향 벡터
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg; // 플레이어에서 적까지의 각도 계산
@@ -43,16 +42,9 @@ public class main_move : MonoBehaviour
         }
         else movespeed=movespeed2;
         Vector3 moveVelocity = new Vector3(x,y,0)*movespeed*Time.deltaTime;
-
-
         this.transform.position += moveVelocity;
     }
-    void target_turn(){
-        target = GameObject.FindGameObjectWithTag("Enemy").GetComponent<Transform>();
-        Vector3 look  = target.position - transform.position;
-        float agl = Mathf.Atan2(look.y, look.x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(agl-90, Vector3.forward);
-    }
+
 
     private GameObject FindClosestEnemy()
     {
