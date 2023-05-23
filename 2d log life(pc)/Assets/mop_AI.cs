@@ -44,7 +44,10 @@ public class mop_AI : MonoBehaviour
             Destroy(gameObject);
         }
         else if(other.tag == "bullet"){
-            if(demege+1 == maxhit) Destroy(gameObject);
+            if(demege+1 == maxhit){
+                gamemanager.exp += (maxhit/(float)2.2);
+                Destroy(gameObject);
+            }
             demege++;
         }
     }

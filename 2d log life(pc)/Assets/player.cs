@@ -6,11 +6,10 @@ using UnityEngine.UI;
 public class player : MonoBehaviour
 {
 
-
+    
     public Slider hpvar;//hp바
     public Slider xp;//경험치 바
 
-    public float exp = 0;
     public float mxp = 100;
 
     public float maxHP=100;
@@ -34,33 +33,17 @@ public class player : MonoBehaviour
     {
         if(nowHP == 0){
             Destroy(gameObject);
+            gamemanager.diePlayer = true;
         }
         transform.position = transform.position+new Vector3(0,0,0);
 
         hpvar.value = nowHP/maxHP;
-        xp.value = exp/mxp;
+        xp.value = gamemanager.exp/mxp;
         if(xp.value >= 1){
-            exp = 0;
+            gamemanager.exp = 0;
+            gamemanager.lvl+=1;
             mxp = mxp * (float)1.05;
         }
         txt.text = nowHP + "/" + maxHP;
     }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Enemy"){
-            if(other.name == "big"){
-                nowHP-=50;
-            }
-            else if(other.name == "zombi"){
-                nowHP-=10; 
-            }
-            else if(other.name == "speed"){
-                nowHP-=5;
-            }
-            else{
-                nowHP=0;
-            }
-        }
-    }
-
 }
