@@ -23,7 +23,7 @@ public class player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gamemanager.nowHP == 0){
+        if(gamemanager.nowHP <= 0){
             Destroy(gameObject);
             gamemanager.diePlayer = true;
         }
