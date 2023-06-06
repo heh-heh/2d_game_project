@@ -7,18 +7,22 @@ using TMPro;
 public class timemer : MonoBehaviour
 {
     public TextMeshProUGUI txt;
-    float timeme=0.0f;
+    int m, ss;
+    static public float s;
     
     // Start is called before the first frame update
     void Start()
     {
         txt.text = "0.00";
+        s=0.0f; m=0; ss=0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        timeme+=Time.deltaTime;
-        txt.text = " "+timeme;
+        s+=Time.deltaTime;
+        ss=(int)s;
+        if(ss>=60){m++; ss=0; gamemanager.timeme+=m; s=0;}
+        txt.text = " " + m + " : " + ss;
     }
 }

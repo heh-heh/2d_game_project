@@ -99,11 +99,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 608bd2734a8a2ca4f9411fe0db48ffd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxhit: 5
+  mophp: 10
+  max_mophp: 5
   player: {fileID: 1862172734324352874, guid: a83631591ff785147bd3e17468b3cc57, type: 3}
-  hp: {fileID: 0}
   movespeed: 4
-  range: 500
 --- !u!50 &2194021442691703237
 Rigidbody2D:
   serializedVersion: 4

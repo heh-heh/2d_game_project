@@ -5,7 +5,8 @@ using UnityEngine;
 public class mop_AI : MonoBehaviour
 {
     float angle;
-    public float mophp=10;
+    public float mophp;
+    public float max_mophp;
     static public float demege = 10;
     Vector2 target2, target;
     public Transform player;
@@ -15,7 +16,7 @@ public class mop_AI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
-
+        mophp=max_mophp;
     }
 
     void Update()
@@ -25,7 +26,9 @@ public class mop_AI : MonoBehaviour
         angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
         this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
         transform.position = Vector3.MoveTowards(transform.position, player.position, movespeed*Time.deltaTime);
-
+        if(timemer.s>=59){
+            mophp*=(max_mophp*(float)1.3);
+        }
     }
         private void OnTriggerEnter2D(Collider2D other)
     {

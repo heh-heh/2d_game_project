@@ -13,6 +13,8 @@ public class gamemanager : MonoBehaviour
     public static float clde = 1;
     public static float maxhp = 0;
     public static bool diePlayer = false;
+    public static float timeme=1.0f;
+    public float timespeed = 1f;
     
     public static int lvl = 1;
     public Text lvtxt;
@@ -29,14 +31,14 @@ public class gamemanager : MonoBehaviour
         maxHP+=maxhp;
         nowHP=maxHP;
         demege+=demegeup;
-        
     }
 
     // Update is called once per frame
     void Update()
     {
+        Time.timeScale=timespeed;
         if(diePlayer == true){
-            Time.TimeScale =0;
+            Time.timeScale =0;
             
         }
         lvtxt.text = " " + lvl;
