@@ -16,6 +16,7 @@ public class mop_AI : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<Transform>();
+        max_mophp *= gamemanager.timeme*(float)1.1;
         mophp=max_mophp;
     }
 
@@ -26,9 +27,6 @@ public class mop_AI : MonoBehaviour
         angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
         this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
         transform.position = Vector3.MoveTowards(transform.position, player.position, movespeed*Time.deltaTime);
-        if(timemer.s>=59){
-            mophp*=(max_mophp*(float)1.3);
-        }
     }
         private void OnTriggerEnter2D(Collider2D other)
     {

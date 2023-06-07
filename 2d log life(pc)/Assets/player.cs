@@ -25,13 +25,14 @@ public class player : MonoBehaviour
     {
         if(gamemanager.nowHP <= 0){
             Destroy(gameObject);
-            gamemanager.diePlayer = true;
+            gamemanager.diePlayer = true;//플레이어 죽음을 게임 매니져 한테 알림
         }
         transform.position = transform.position+new Vector3(0,0,0);
 
         hpvar.value = gamemanager.nowHP/gamemanager.maxHP;
         xp.value = gamemanager.exp/mxp;
         if(xp.value >= 1){
+            gamemanager.demege*=(float)1.15;
             gamemanager.exp = 0;
             gamemanager.lvl+=1;
             mxp = mxp * (float)1.05;
