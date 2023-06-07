@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class gamemanager : MonoBehaviour
 {
     public static bool menew_sh = false;
-
+    public static bool level_UP = false;
 
     //passve
     public static float gunspeed = 1;
@@ -40,7 +40,7 @@ public class gamemanager : MonoBehaviour
     void Update()
     {
         
-        if(menew_sh == true){
+        if(menew_sh == true||level_UP == true){
             Time.timeScale =0;
         }
         else

@@ -32,6 +32,7 @@ public class player : MonoBehaviour
         hpvar.value = gamemanager.nowHP/gamemanager.maxHP;
         xp.value = gamemanager.exp/mxp;
         if(xp.value >= 1){
+            gamemanager.level_UP=true;
             gamemanager.demege*=(float)1.15;
             gamemanager.exp = 0;
             gamemanager.lvl+=1;
