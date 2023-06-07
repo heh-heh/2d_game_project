@@ -37,7 +37,7 @@ public class mop_AI : MonoBehaviour
         }
         else if(other.tag == "bullet"){
             if(mophp <= 0 ){
-                gamemanager.exp += (mophp/(float)2.2);
+                gamemanager.exp += (max_mophp/(float)2.2);
                 Destroy(gameObject);
             }
             mophp -= gamemanager.demege;
