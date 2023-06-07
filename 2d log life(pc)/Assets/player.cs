@@ -10,7 +10,7 @@ public class player : MonoBehaviour
     public Slider hpvar;//hp바
     public Slider xp;//경험치 바
 
-    public float mxp = 100;
+    public static float mxp = 100;
 
     public Text txt;
 
