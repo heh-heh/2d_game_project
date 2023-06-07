@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    
     public GameObject[] enemyPrefabs; // 다양한 적 프리팹들
     public float spawnInterval = 2f; // 생성 간격
     private float timer = 0f;
@@ -20,7 +21,8 @@ public class EnemySpawner : MonoBehaviour
         if (timer >= spawnInterval)
         {
             timer = 0f;
-            SpawnEnemy();
+            if(Random.Range(1,4)==1)
+                SpawnEnemy();
         }
     }
 
