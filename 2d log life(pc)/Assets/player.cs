@@ -34,7 +34,7 @@ public class player : MonoBehaviour
         if(xp.value >= 1){
             gamemanager.level_UP=true;
             gamemanager.demege*=(float)1.15;
-            gamemanager.exp = 0;
+            gamemanager.exp -= mxp;
             gamemanager.lvl+=1;
             mxp = mxp * (float)1.05;
         }

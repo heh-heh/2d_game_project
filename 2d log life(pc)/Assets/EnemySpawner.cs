@@ -17,13 +17,9 @@ public class EnemySpawner : MonoBehaviour
 
     private void Update()
     {
-        timer += Time.deltaTime;
-        if (timer >= spawnInterval)
-        {
-            timer = 0f;
-            if(Random.Range(1,4)==1)
+            if(Random.Range(1,10)==1)
                 SpawnEnemy();
-        }
+
     }
 
     private void SpawnEnemy()

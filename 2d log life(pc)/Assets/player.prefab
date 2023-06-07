@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: 7642308679588510660}
   - component: {fileID: 7642308679588510658}
   - component: {fileID: 7642308679588510659}
+  - component: {fileID: -3867077982697575914}
   - component: {fileID: 7642308679588510657}
   - component: {fileID: 7642308679588510656}
   m_Layer: 0
@@ -188,6 +189,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 3
   target: {fileID: 0}
+  enemy: {fileID: 0}
 --- !u!114 &7642308679588510659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -200,13 +202,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23e8f3b0722780c428b35acb0f31f43e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpvar: {fileID: 0}
+  xp: {fileID: 0}
+  txt: {fileID: 0}
+--- !u!114 &-3867077982697575914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7642308679588510663}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e7290cd758000344bc61726cb83182b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   bullet: {fileID: 3334737681245021629, guid: 91ef011441e090849a1e2caa20db359a, type: 3}
   firePos: {fileID: 7642308678511838156}
-  hpvar: {fileID: 0}
-  maxHP: 100
-  nowHP: 100
-  txt: {fileID: 0}
-  firelate: 0.05
+  firelate: 0.1
 --- !u!58 &7642308679588510657
 CircleCollider2D:
   m_ObjectHideFlags: 0
