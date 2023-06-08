@@ -26,7 +26,7 @@ public class mop_spawn_2 : MonoBehaviour
         if (timer >= spawnInterval)
         {
             timer = 0f;
-            if(Random.Range(1,4)==1)
+            if(Random.Range(1,mop_spawn_menager.spawn_P)==1)
                 SpawnObject();
         }
     }

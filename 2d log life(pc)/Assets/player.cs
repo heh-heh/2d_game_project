@@ -35,8 +35,6 @@ public class player : MonoBehaviour
             gamemanager.level_UP=true;
             gamemanager.demege*=(float)1.15;
             gamemanager.exp -= mxp;
-            gamemanager.lvl+=1;
-            mxp = mxp * (float)1.05;
         }
         txt.text = gamemanager.nowHP + "/" + gamemanager.maxHP;
     }

@@ -16,7 +16,6 @@ public class retunr_EXP : MonoBehaviour
     }
     public void reuturn_exp()
     {
-        gamemanager.lvl --;
         gamemanager.exp = player.mxp*(float)0.2;
         gamemanager.level_UP = false;
     }

@@ -7,7 +7,6 @@ public class EnemySpawner : MonoBehaviour
     
     public GameObject[] enemyPrefabs; // 다양한 적 프리팹들
     public float spawnInterval = 2f; // 생성 간격
-    private float timer = 0f;
     private Camera mainCamera;
 
     private void Start()
