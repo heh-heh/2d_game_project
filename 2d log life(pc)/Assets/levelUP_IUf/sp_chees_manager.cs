@@ -22,17 +22,15 @@ public class sp_chees_manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(level_UP2==true&&chees_sp == false){
-            sp_random(0,2,1,12);
+        if(level_UP2==true&&chees_sp == false&&gamemanager.level_UP == true){
+            sp_random(0,3,1,12);
             txt1.text = " "+sp_list[sp_list_num[0]];
             txt2.text = " "+sp_list[sp_list_num[1]];
             txt3.text = " "+sp_list[sp_list_num[2]];
             //Debug.Log("test" + sp_list_num[0] + sp_list_num[1] + sp_list_num[2]);
-            chees_sp=true;
-            level_UP2=false;
+            chees_sp=true; level_UP2=false;
         }
     }
-
     void sp_random(int min, int max, int min2, int max2)
     {
         int currentNumber = Random.Range(min2, max2);

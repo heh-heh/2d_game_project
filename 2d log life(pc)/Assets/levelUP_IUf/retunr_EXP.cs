@@ -18,5 +18,6 @@ public class retunr_EXP : MonoBehaviour
     {
         gamemanager.exp = player.mxp*(float)0.2;
         gamemanager.level_UP = false;
+        sp_chees_manager.sp_list_num.RemoveRange(0,3);
     }
 }

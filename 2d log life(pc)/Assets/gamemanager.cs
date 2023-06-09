@@ -7,6 +7,8 @@ public class gamemanager : MonoBehaviour
 {
     public static bool menew_sh = false;
     public static bool level_UP = false;
+    public static int[] sp_level;
+    public int[] sp_level_public;
 
     //passve
     public static float gunspeed = 1;
@@ -19,6 +21,8 @@ public class gamemanager : MonoBehaviour
     public static float timeme=1.0f;
     public float timespeed = 1f;
     
+    
+
     public static int lvl = 1;
     public Text lvtxt;
 
@@ -34,6 +38,7 @@ public class gamemanager : MonoBehaviour
         maxHP+=maxhp;
         nowHP=maxHP;
         demege+=demegeup;
+        sp_level=sp_level_public;
     }
 
     // Update is called once per frame
