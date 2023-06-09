@@ -15,6 +15,7 @@ public class EXP_UI_SH : MonoBehaviour
     void Update()
     {
         if(gamemanager.level_UP == true){
+            sp_chees_manager.level_UP2=true;
             sh_UI.SetActive(true);
         }
         else if(gamemanager.level_UP == false){

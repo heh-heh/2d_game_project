@@ -2011,6 +2011,7 @@ GameObject:
   - component: {fileID: 846810086}
   - component: {fileID: 846810085}
   - component: {fileID: 846810084}
+  - component: {fileID: 846810087}
   m_Layer: 5
   m_Name: "\uC120\uD0DD\uC9C03"
   m_TagString: Untagged
@@ -2082,7 +2083,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 846810085}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 846810087}
+        m_TargetAssemblyTypeName: level_up_button, Assembly-CSharp
+        m_MethodName: level_up_button_fn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &846810085
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2121,6 +2134,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 846810082}
   m_CullTransparentMesh: 1
+--- !u!114 &846810087
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846810082}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e8723f9be5648b42bae4e3ee0b63985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &897677226
 GameObject:
   m_ObjectHideFlags: 0
@@ -2205,7 +2230,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 897677229}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 897677231}
+        m_TargetAssemblyTypeName: level_up_button, Assembly-CSharp
+        m_MethodName: level_up_button_fn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &897677229
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2256,8 +2293,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8723f9be5648b42bae4e3ee0b63985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 0}
-  num: 0
 --- !u!1 &934661110
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,6 +3836,9 @@ MonoBehaviour:
   - test10
   - test11
   - test12
+  txt1: {fileID: 203127095}
+  txt2: {fileID: 1035641416}
+  txt3: {fileID: 1174375302}
 --- !u!1 &1950680335
 GameObject:
   m_ObjectHideFlags: 0
@@ -3885,7 +3923,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1950680338}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1950680340}
+        m_TargetAssemblyTypeName: level_up_button, Assembly-CSharp
+        m_MethodName: level_up_button_fn
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1950680338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3936,8 +3986,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e8723f9be5648b42bae4e3ee0b63985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  txt: {fileID: 187795647}
-  num: 1
 --- !u!1 &2042507706
 GameObject:
   m_ObjectHideFlags: 0
