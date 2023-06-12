@@ -16,7 +16,7 @@ public class gamemanager : MonoBehaviour
     public static float demegeup = 0;
     public static float cl = 1;
     public static float clde = 1;
-    public static float maxhp = 0;
+    public static float maxhp = 1;
     public static bool diePlayer = false;
     public static float timeme=1.0f;
     public float timespeed = 1f;

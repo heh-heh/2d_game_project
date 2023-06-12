@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class mop_spawn_2 : MonoBehaviour
+public class item_spawn : MonoBehaviour
 {    
     public GameObject[] enemyPrefabs;
     public Transform spawnArea;
