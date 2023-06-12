@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class gamemanager : MonoBehaviour
 {
@@ -16,7 +17,7 @@ public class gamemanager : MonoBehaviour
     public static float demegeup = 0;
     public static float cl = 1;
     public static float clde = 1;
-    public static float maxhp = 1;
+    public static float maxhp = 0;
     public static bool diePlayer = false;
     public static float timeme=1.0f;
     public float timespeed = 1f;
@@ -24,7 +25,7 @@ public class gamemanager : MonoBehaviour
     
 
     public static int lvl = 1;
-    public Text lvtxt;
+    public TextMeshProUGUI lvl_txt;
 
     public static float exp = 0;
     static public float demege = 3;
@@ -34,7 +35,7 @@ public class gamemanager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        lvtxt.text =" " + lvl;
+        lvl_txt.text =" " + lvl;
         maxHP+=maxhp;
         nowHP=maxHP;
         demege+=demegeup;
@@ -54,6 +55,6 @@ public class gamemanager : MonoBehaviour
             Time.timeScale =0;
             
         }
-        lvtxt.text = " " + lvl;
+        lvl_txt.text = "" + lvl;
     }
 }
