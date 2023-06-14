@@ -16,13 +16,14 @@ public class ese_meew : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Escape)&&gamemanager.menew_sh==false&&gamemanager.level_UP==false){
+        if(Input.GetKeyDown(KeyCode.Escape)&&gamemanager.menew_sh==false&&gamemanager.level_UP==false&&gamemanager.diePlayer==false){
             sh_UI.SetActive(true);
             gamemanager.menew_sh=true;
         }
-        else if(Input.GetKeyDown(KeyCode.Escape)&&gamemanager.menew_sh==true){
+        else if((Input.GetKeyDown(KeyCode.Escape)&&gamemanager.menew_sh==true)||gamemanager.menew_sh==false){
             sh_UI.SetActive(false);
             gamemanager.menew_sh=false;
         }
+        
     }
 }

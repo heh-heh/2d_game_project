@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
-public class return_to_main : MonoBehaviour
+public class game_reset : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,7 +16,8 @@ public class return_to_main : MonoBehaviour
     {
         
     }
-    public void return_to_main_button(){
+    public void restart_game(){
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         gamemanager.menew_sh=false;
     }
 }

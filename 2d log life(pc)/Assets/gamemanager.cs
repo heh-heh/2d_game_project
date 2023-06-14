@@ -21,7 +21,8 @@ public class gamemanager : MonoBehaviour
     public static bool diePlayer = false;
     public static float timeme=1.0f;
     public float timespeed = 1f;
-    
+    public static float firelate = 0.1f;
+    public float firelate_test = 0.1f;
     
 
     public static int lvl = 1;
@@ -46,15 +47,13 @@ public class gamemanager : MonoBehaviour
     void Update()
     {
         
-        if(menew_sh == true||level_UP == true){
+        if(menew_sh == true||level_UP == true||diePlayer == true){
             Time.timeScale =0;
         }
         else
             Time.timeScale=timespeed;//게임 배속 용
-        if(diePlayer == true){//플레이어 사망
-            Time.timeScale =0;
             
-        }
         lvl_txt.text = "" + lvl;
+        firelate=firelate_test;
     }
 }

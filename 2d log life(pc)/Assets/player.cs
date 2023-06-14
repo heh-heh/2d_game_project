@@ -10,7 +10,7 @@ public class player : MonoBehaviour
     public Slider hpvar;//hp바
     public Slider xp;//경험치 바
 
-    public static float mxp = 100;
+    public static float mxp = 500;
 
     public Text txt;
 
@@ -24,7 +24,6 @@ public class player : MonoBehaviour
     void Update()
     {
         if(gamemanager.nowHP <= 0){
-            Destroy(gameObject);
             gamemanager.diePlayer = true;//플레이어 죽음을 게임 매니져 한테 알림
         }
         transform.position = transform.position+new Vector3(0,0,0);

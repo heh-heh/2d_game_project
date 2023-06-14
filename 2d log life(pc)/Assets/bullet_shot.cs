@@ -6,13 +6,11 @@ public class bullet_shot : MonoBehaviour
 {
     public GameObject bullet;//총알
     public Transform firePos;//총구\
-    public float firelate = 0.1f;
     bool fire;
 
     // Start is called before the first frame update
     void Start()
     {
-        firelate /= gamemanager.gunspeed;
         fire = true;
     }
 
@@ -26,7 +24,7 @@ public class bullet_shot : MonoBehaviour
         }
     }
         IEnumerator delay(){
-        yield return new WaitForSeconds(firelate);
+        yield return new WaitForSeconds(gamemanager.firelate/1000);
         fire = true;
     }
 }
