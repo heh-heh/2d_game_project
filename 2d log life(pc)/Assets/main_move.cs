@@ -20,12 +20,14 @@ public class main_move : MonoBehaviour
 
     void Start()
     {
-        movespeed += gamemanager.movespeed;
+        movespeed = gamemanager.movespeed;
         movespeed2=movespeed;
         
     }
     void Update()
     {
+        
+
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Move();
         GameObject closestEnemy = FindClosestEnemy();
@@ -38,10 +40,10 @@ public class main_move : MonoBehaviour
         float x=Input.GetAxisRaw("Horizontal");
         float y=Input.GetAxisRaw("Vertical");
         if(Input.GetKey(KeyCode.LeftShift)){
-            movespeed=movespeed2*1.5f;
+            movespeed=movespeed*1.5f;
         }
-        else movespeed=movespeed2;
-        Vector3 moveVelocity = new Vector3(x,y,0)*movespeed*Time.deltaTime;
+        else movespeed=gamemanager.movespeed;
+        Vector3 moveVelocity = new Vector3(x,y,0)*gamemanager.movespeed*Time.deltaTime;
         this.transform.position += moveVelocity;
     }
 

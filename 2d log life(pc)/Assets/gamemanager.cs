@@ -13,7 +13,7 @@ public class gamemanager : MonoBehaviour
 
     //passve
     public static float gunspeed = 1;
-    public static float movespeed = 0;
+    public static float movespeed = 3;
     public static float demegeup = 0;
     public static float cl = 1;
     public static float clde = 1;

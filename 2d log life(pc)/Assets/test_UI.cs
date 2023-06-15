@@ -20,7 +20,7 @@ public class test_UI : MonoBehaviour
     {
         demege_txt.text = "demege : " + gamemanager.demege;
         exp_txt.text = "exp : " + gamemanager.exp;
-        speed_txt.text = "speed : " + main_move.movespeed;
+        speed_txt.text = "speed : " + (gamemanager.movespeed*(((float)0.02*(gamemanager.sp_level[0]+1))));
         score_txt.text = "score : " + gamemanager.score;
         fire_txt.text = "fire rate : " + (gamemanager.firelate - (gamemanager.firelate* (gamemanager.firelate_2*gamemanager.sp_level[3])));
     }

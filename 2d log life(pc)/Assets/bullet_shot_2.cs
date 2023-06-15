@@ -12,7 +12,7 @@ public class bullet_shot_2 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        timer = gamemanager.firelate/1000;
+        timer = (gamemanager.firelate - (gamemanager.firelate* (gamemanager.firelate_2*gamemanager.sp_level[3])))/1000;
     }
 
     // Update is called once per frame
