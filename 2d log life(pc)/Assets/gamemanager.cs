@@ -40,7 +40,6 @@ public class gamemanager : MonoBehaviour
         maxHP+=maxhp;
         nowHP=maxHP;
         demege+=demegeup;
-        sp_level=sp_level_public;
     }
 
     // Update is called once per frame
@@ -49,11 +48,14 @@ public class gamemanager : MonoBehaviour
         
         if(menew_sh == true||level_UP == true||diePlayer == true){
             Time.timeScale =0;
+            if(level_UP == true){
+                demege = demege *= (sp_level[0]+1);
+            }
         }
         else
             Time.timeScale=timespeed;//게임 배속 용
             
         lvl_txt.text = "" + lvl;
-        firelate=firelate_test;
+        firelate=firelate_test; sp_level=sp_level_public;
     }
 }

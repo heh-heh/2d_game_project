@@ -5,7 +5,7 @@ using UnityEngine;
 public class main_move : MonoBehaviour
 {
 
-    public float movespeed = 3.0f;
+    static public float movespeed = 3.0f;
     float movespeed2=0;
 
     float angle;

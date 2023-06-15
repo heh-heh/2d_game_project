@@ -13,6 +13,11 @@ public class sp_chees_manager : MonoBehaviour
     public TextMeshProUGUI txt1;
     public TextMeshProUGUI txt2;
     public TextMeshProUGUI txt3;
+
+    public int sp_random_min;
+    public int sp_random_max;
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,7 +28,7 @@ public class sp_chees_manager : MonoBehaviour
     void Update()
     {
         if(level_UP2==true&&chees_sp == false&&gamemanager.level_UP == true){
-            sp_random(0,3,1,12);
+            sp_random(0,3,sp_random_min,sp_random_max);
             txt1.text = " "+sp_list[sp_list_num[0]];
             txt2.text = " "+sp_list[sp_list_num[1]];
             txt3.text = " "+sp_list[sp_list_num[2]];
