@@ -21,6 +21,7 @@ public class gamemanager : MonoBehaviour
     public static bool diePlayer = false;
     public static float timeme=1.0f;
     public float timespeed = 1f;
+    public static float firelate_2 = 0.02f;
     public static float firelate = 0.1f;
     public float firelate_test = 0.1f;
     
@@ -32,6 +33,9 @@ public class gamemanager : MonoBehaviour
     static public float demege = 3;
     static public float maxHP=50;
     static public float nowHP;
+
+    static public int score = 0;
+
     
     // Start is called before the first frame update
     void Start()
@@ -48,9 +52,6 @@ public class gamemanager : MonoBehaviour
         
         if(menew_sh == true||level_UP == true||diePlayer == true){
             Time.timeScale =0;
-            if(level_UP == true){
-                demege = demege *= (sp_level[0]+1);
-            }
         }
         else
             Time.timeScale=timespeed;//게임 배속 용

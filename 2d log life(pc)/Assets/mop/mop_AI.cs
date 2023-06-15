@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class mop_AI : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class mop_AI : MonoBehaviour
     Vector2 target2, target;
     public Transform player;
     public float movespeed = 2.0f;
+    //public Slider hp;
     //public Imege Particle;
 
     void Start()
@@ -22,6 +24,8 @@ public class mop_AI : MonoBehaviour
 
     void Update()
     {
+        //hp.value = mophp/max_mophp;
+
         //플레이어 따라 가기
         target2 = player.position;
         angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
@@ -38,6 +42,7 @@ public class mop_AI : MonoBehaviour
         else if(other.tag == "bullet"){
             if(mophp <= 0 ){
                 gamemanager.exp += (max_mophp/(float)2.2);
+                gamemanager.score += (int)max_mophp * (int)gamemanager.timeme;
                 Destroy(gameObject);
             }
             mophp -= gamemanager.demege;

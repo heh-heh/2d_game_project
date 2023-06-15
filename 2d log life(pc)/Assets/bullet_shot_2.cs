@@ -21,7 +21,7 @@ public class bullet_shot_2 : MonoBehaviour
         timer-=Time.deltaTime;
         if(timer <= 0){
             SpawnBullet(); // 총알 발사
-            timer = gamemanager.firelate/1000; // 타이머 초기화
+            timer = (gamemanager.firelate - (gamemanager.firelate* (gamemanager.firelate_2*gamemanager.sp_level[3])))/1000; // 타이머 초기화
         }
     }
     void SpawnBullet()
