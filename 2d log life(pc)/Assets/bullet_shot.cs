@@ -18,12 +18,13 @@ public class bullet_shot : MonoBehaviour
     void Update()
     {
         if(fire){   
-            StartCoroutine("delay");
+            
             Instantiate(bullet, firePos.transform.position, this.transform.rotation);
+            StartCoroutine("delay");
             fire = false;
         }
     }
-        IEnumerator delay(){
+    IEnumerator delay(){
         yield return new WaitForSeconds(gamemanager.firelate/1000);
         fire = true;
     }
