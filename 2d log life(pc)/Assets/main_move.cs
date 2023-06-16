@@ -27,6 +27,7 @@ public class main_move : MonoBehaviour
     void Update()
     {
         
+        movespeed += (gamemanager.movespeed*(float)(0.02 * gamemanager.sp_level[0]));
 
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         Move();
@@ -37,13 +38,14 @@ public class main_move : MonoBehaviour
 
     }
     void Move(){
+        Vector3 moveVelocity;
         float x=Input.GetAxisRaw("Horizontal");
         float y=Input.GetAxisRaw("Vertical");
         if(Input.GetKey(KeyCode.LeftShift)){
-            movespeed=movespeed*1.5f;
+            moveVelocity = new Vector3(x,y,0)*(float)(movespeed*1.5)*Time.deltaTime;
         }
-        else movespeed=gamemanager.movespeed;
-        Vector3 moveVelocity = new Vector3(x,y,0)*gamemanager.movespeed*Time.deltaTime;
+        else moveVelocity = new Vector3(x,y,0)*movespeed*Time.deltaTime;
+        
         this.transform.position += moveVelocity;
     }
 

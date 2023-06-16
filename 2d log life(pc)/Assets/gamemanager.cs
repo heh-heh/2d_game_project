@@ -17,7 +17,7 @@ public class gamemanager : MonoBehaviour
     public static float demegeup = 0;
     public static float cl = 1;
     public static float clde = 1;
-    public static float maxhp = 0;
+    public static float maxhp = 0.05f;
     public static bool diePlayer = false;
     public static float timeme=1.0f;
     public float timespeed = 1f;
@@ -41,7 +41,6 @@ public class gamemanager : MonoBehaviour
     void Start()
     {
         lvl_txt.text =" " + lvl;
-        maxHP+=maxhp;
         nowHP=maxHP;
         demege+=demegeup;
     }
