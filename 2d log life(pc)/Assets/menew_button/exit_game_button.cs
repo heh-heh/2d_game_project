@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class exit_game_button : MonoBehaviour
 {
@@ -16,6 +17,6 @@ public class exit_game_button : MonoBehaviour
         
     }
     public void game_out(){
-        Application.Quit();
+        SceneManager.LoadScene("menew");
     }
 }

@@ -20,6 +20,8 @@ public class timemer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if(ss == 30){gamemanager.game_clear = true;}
+
         s+=Time.deltaTime;
         ss=(int)s;
         if(ss>=60){m++; ss=0; gamemanager.timeme+=m; s=0;}

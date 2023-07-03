@@ -6,8 +6,12 @@ using TMPro;
 
 public class gamemanager : MonoBehaviour
 {
+    public static bool game_clear = false;
+
+
     public static bool menew_sh = false;
     public static bool level_UP = false;
+    public bool stat_up = false;
     public static int[] sp_level;
     public int[] sp_level_public;
 
@@ -42,20 +46,27 @@ public class gamemanager : MonoBehaviour
     {
         lvl_txt.text =" " + lvl;
         nowHP=maxHP;
-        demege+=demegeup;
+        demege=3;
+        movespeed = 3;
+
+
+
     }
 
     // Update is called once per frame
     void Update()
     {
         
-        if(menew_sh == true||level_UP == true||diePlayer == true){
+        if(menew_sh == true||level_UP == true||diePlayer == true||game_clear == true){
             Time.timeScale =0;
-            
         }
         else
             Time.timeScale=timespeed;//게임 배속 용
             
+        if(stat_up == true){
+            maxHP = maxHP+((maxHP*maxhp)*(sp_level[2]+1));
+            stat_up = false;
+        }
         lvl_txt.text = "" + lvl;
         firelate=firelate_test; sp_level=sp_level_public;
         
