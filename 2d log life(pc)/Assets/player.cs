@@ -28,6 +28,7 @@ public class player : MonoBehaviour
         }
         transform.position = transform.position+new Vector3(0,0,0);
 
+        
         hpvar.value = gamemanager.nowHP/gamemanager.maxHP;
         xp.value = gamemanager.exp/mxp;
         if(xp.value >= 1){

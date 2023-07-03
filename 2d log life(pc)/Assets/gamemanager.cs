@@ -51,11 +51,13 @@ public class gamemanager : MonoBehaviour
         
         if(menew_sh == true||level_UP == true||diePlayer == true){
             Time.timeScale =0;
+            
         }
         else
             Time.timeScale=timespeed;//게임 배속 용
             
         lvl_txt.text = "" + lvl;
         firelate=firelate_test; sp_level=sp_level_public;
+        
     }
 }
