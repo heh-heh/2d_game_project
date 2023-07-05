@@ -31,6 +31,8 @@ public class mop_AI : MonoBehaviour
         angle = Mathf.Atan2(target2.y - target.y, target2.x - target.x) * Mathf.Rad2Deg;
         this.transform.rotation = Quaternion.AngleAxis(angle-90, Vector3.forward);
         transform.position = Vector3.MoveTowards(transform.position, player.position, movespeed*Time.deltaTime);
+
+        if(gamemanager.game_clear[0] == true||gamemanager.game_clear[1] == true||gamemanager.game_clear[2] == true){Destroy(gameObject);}
     }
         private void OnTriggerEnter2D(Collider2D other)
     {

@@ -18,5 +18,7 @@ public class exit_game_button : MonoBehaviour
     }
     public void game_out(){
         SceneManager.LoadScene("menew");
+        gamemanager.demege = 3; gamemanager.score =0; gamemanager.exp = 0;
+        gamemanager.menew_sh = false;
     }
 }

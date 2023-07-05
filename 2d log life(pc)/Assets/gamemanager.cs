@@ -6,7 +6,7 @@ using TMPro;
 
 public class gamemanager : MonoBehaviour
 {
-    public static bool game_clear = false;
+    public static bool [] game_clear = new bool [3];
 
 
     public static bool menew_sh = false;
@@ -57,7 +57,7 @@ public class gamemanager : MonoBehaviour
     void Update()
     {
         
-        if(menew_sh == true||level_UP == true||diePlayer == true||game_clear == true){
+        if(menew_sh == true||level_UP == true||diePlayer == true||game_clear[0] == true||game_clear[1] == true||game_clear[2] == true){
             Time.timeScale =0;
         }
         else

@@ -16,11 +16,11 @@ public class game_cl_UI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(gamemanager.game_clear == true){
+        if(gamemanager.game_clear[0] == true){
             score_txt.text = "점수 : "+gamemanager.score;
             sh_UI.SetActive(true);
         }
-        else if(gamemanager.game_clear == false){
+        else if(gamemanager.game_clear[0] == false){
             sh_UI.SetActive(false);
         }
     }

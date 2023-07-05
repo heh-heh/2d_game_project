@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class gamestart_button : MonoBehaviour
+public class gamestart_clear_button : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -18,8 +18,7 @@ public class gamestart_button : MonoBehaviour
     }
     static public void Change(string scene_txt){
         Debug.Log("scene Name to load  " + scene_txt);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        gamemanager.game_clear[0]=false;
+        gamemanager.demege = 3; gamemanager.score =0; gamemanager.exp = 0;
         SceneManager.LoadScene(scene_txt);
     }
 }

@@ -6,6 +6,7 @@ using TMPro;
 
 public class timemer : MonoBehaviour
 {
+    public int clear_time_m;
     public TextMeshProUGUI txt;
     int m, ss;
     static public float s;
@@ -20,7 +21,7 @@ public class timemer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(ss == 30){gamemanager.game_clear = true;}
+        if(m == clear_time_m){gamemanager.game_clear[0] = true;}
 
         s+=Time.deltaTime;
         ss=(int)s;
