@@ -48,9 +48,6 @@ public class gamemanager : MonoBehaviour
         nowHP=maxHP;
         demege=3;
         movespeed = 3;
-
-
-
     }
 
     // Update is called once per frame

@@ -34,7 +34,8 @@ public class mop_AI : MonoBehaviour
 
         if(gamemanager.game_clear[0] == true||gamemanager.game_clear[1] == true||gamemanager.game_clear[2] == true){Destroy(gameObject);}
     }
-        private void OnTriggerEnter2D(Collider2D other)
+
+    private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.tag == "Player")
         {
