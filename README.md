@@ -21,4 +21,4 @@
 
 간단한 게임 플레이 영상
 -----
-https://youtu.be/tCQBS38R_Ys
+![시연영상](https://github.com/heh-heh/2d_game_project/blob/main/%EB%A1%9C%EA%B7%B8%EB%9D%BC%EC%9D%B4%ED%81%AC%20%EC%A4%91%EA%B0%84%20%EC%A0%80%EC%9E%A5.gif)
